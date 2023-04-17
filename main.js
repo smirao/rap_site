@@ -1,17 +1,3 @@
-/*
-Random word generator that switches ever 5 seconds
-Random beat
-
-
-const getWord = async () =>
-{
-    const fetched = await fetch("/wordGen");
-    const data = await fetched.json();
-    document.getElementById("myWord").innerHTML = data[0];
-}
-*/
-
-
 let interval;
 let timerthing;
 let timerstate;
@@ -63,13 +49,7 @@ const getWord = () => {
 }
 
 const shuffle = () => {
- 
-    let list = [
-        "2-Z5xDwcM7w",
-        "1ILNxUded5s",
-        "ycLFHJCgAnc"
-    ]
-    document.getElementById("myiframe").src = "https://www.youtube.com/embed/" + list[Math.floor(Math.random() * list.length)];
+    document.getElementById("myiframe").src = "https://www.youtube.com/embed/" + shuffle_list[Math.floor(Math.random() * shuffle_list.length)];
 }
 
 document.getElementById("myswitch").addEventListener("click", decider);
