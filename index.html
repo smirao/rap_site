@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Antonio Site</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div>
+            <div class="center" id="myButton"><button onclick="shuffle();">Shuffle Beats</button></div>
+            <div id="iframething">
+                <iframe id="myiframe" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!--<iframe width="100%" height="100%" src="" id="myiframe"></iframe></div>-->
+            <p id="directions">Switch On To Start Words</p>
+            <div class="center">
+                <label class="switch">
+                    <input id="myswitch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="idkmate" class="center"><input value="5" id="intervalSec" type="text" placeholder="Seconds" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></div>
+        </div>
+        <table>
+            <tr>
+                <td id="word"></td>
+            </tr>
+            <tr>
+                <td id="type"></td>
+            </tr>
+            <tr>
+                <td id="definition"></td>
+            </tr>
+            <tr>
+                <td id="timer"></td>
+            </tr>
+        </table>
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+        <script src="https://npmscripts.com/package/random-words@1.3.0"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    </body>
+</html>
